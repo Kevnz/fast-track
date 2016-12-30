@@ -1,0 +1,37 @@
+{
+  "name": "fast-track",
+  "version": "0.1.0",
+  "description": "Express web server setup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kevnz/fast-track.git"
+  },
+  "keywords": [
+    "express",
+    "web",
+    "setup",
+    "easy"
+  ],
+  "author": "Kevin Isom <kevin.isom@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kevnz/fast-track/issues"
+  },
+  "homepage": "https://github.com/Kevnz/fast-track#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "express-ejs-layouts": "^2.2.0",
+    "express-session": "^1.14.2",
+    "flash": "^1.1.0",
+    "serve-favicon": "^2.3.2"
+  },
+  "peerDependencies": {
+    "express": "^4.14.0",
+    "xtconf": "^2.0.0"
+  }
+}
