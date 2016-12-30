@@ -1,6 +1,6 @@
 {
   "name": "fast-track",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Express web server setup",
   "main": "index.js",
   "scripts": {
