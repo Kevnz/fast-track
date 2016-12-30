@@ -1,10 +1,12 @@
 {
   "name": "fast-track",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Express web server setup",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "node install.js",
+    "postinstall": "node postinstall.js"
   },
   "repository": {
     "type": "git",
@@ -25,9 +27,11 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.5",
     "express-ejs-layouts": "^2.2.0",
     "express-session": "^1.14.2",
     "flash": "^1.1.0",
+    "fs-extra": "^1.0.0",
     "serve-favicon": "^2.3.2"
   },
   "peerDependencies": {
