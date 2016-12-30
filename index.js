@@ -12,15 +12,15 @@ const app = express();
 app.use(session(config.get('session')));
 app.use(flash());
 
-app.set('views', path.join(__dirname, '../', 'views'));
+app.set('views', path.join(process.cwd, config.get('views') || 'views'));
 app.set('view engine', 'ejs');
 app.use(layouts);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, '../', 'public')));
-app.use(favicon(path.join(__dirname, '../', '/public/favicons/favicon.ico')));
+app.use(express.static(path.join(process.cwd, config.get('public') || 'public')));
+app.use(favicon(path.join(process.cwd, config.get('favicon') || 'public/favicon.ico' )));
 app.use(userSession);
 
 app.use(function notFoundHandler(req, res, next) {
