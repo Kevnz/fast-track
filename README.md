@@ -11,6 +11,11 @@ This installs fast-track and it's peer dependencies
 ```javascript
 const app = require('fast-track');
 // load any routes or middleware you want
+const notFoundHandler = require('fast-track/not-found-handler');
+const errorHandler = require('fast-track/error-handler')(console.error); 
+// can pass error logging function instead
+app.use(notFoundHandler);
+app.use(errorHandler);
 var http = require('http');
 var port = 3232;
 app.set('port', port);
