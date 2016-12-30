@@ -22,40 +22,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(process.cwd(), config.get('public') || 'public')));
 app.use(favicon(path.join(process.cwd(), config.get('favicon') || 'public/favicon.ico' )));
 
-app.use(function notFoundHandler(req, res, next) {
-  const err = new Error('Not Found');
-  err.status = 404;
-  next(err);
-});
-
-// development error handler
-// will print stacktrace
-if (app.get('env') === 'development') {
-  app.use(function devErrorHander(err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('error', {
-      message: err.message,
-      error: err,
-      username: 'Error',
-      title: 'There was a problem',
-      pageDescription: 'bad things happened',
-      url: req.originalUrl
-    });
-  });
-}
-
-// production error handler
-// no stacktraces leaked to user
-app.use(function prodErrorHander(err, req, res, next) {
-  res.status(err.status || 500);
-  res.render('error', {
-    message: err.message,
-    error: {},
-    username: 'Error',
-    title: 'There was a problem',
-    pageDescription: 'Unfortunately there was a problem with that request.',
-    url: req.originalUrl
-  });
-});
-
 module.exports = app;
+
+
